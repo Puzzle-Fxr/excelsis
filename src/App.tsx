@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { 
   Menu, X, Phone, Mail, MapPin, Clock, ChevronRight, 
   Building2, Users, Shield, TrendingUp, Award, Heart,
-  Linkedin, Twitter, Facebook
+  Linkedin, Twitter, Facebook, BanknoteArrowUp, 
+  BanknoteArrowDown, Handshake, HandCoins 
 } from 'lucide-react';
 
 export default function App() {
@@ -137,11 +138,17 @@ export default function App() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4" style={{ justifyContent: 'center' }}>
-              <button className="btn-gold px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center group">
+              <button 
+              className="btn-gold px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center group"
+              onClick={() => scrollToSection('location')}
+              >
                 Start Your Journey
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="btn-outline-gold px-8 py-4 rounded-full font-semibold text-lg">
+              <button 
+              className="btn-outline-gold px-8 py-4 rounded-full font-semibold text-lg"
+              onClick={() => scrollToSection('services')}
+              >
                 Explore Services
               </button>
             </div>
@@ -149,10 +156,10 @@ export default function App() {
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gold-400/20">
               {[
-                { value: '70+', label: 'Years of Service' },
-                { value: '$2.5B', label: 'Assets Managed' },
-                { value: '85,000+', label: 'Members' },
-                { value: '4.9★', label: 'Member Rating' },
+                { value: '40+', label: 'Years of Service' },
+                { value: '₵1.5M', label: 'Assets Managed' },
+                { value: '100+', label: 'Members' },
+                { value: '4.8★', label: 'Member Rating' },
               ].map((stat, i) => (
                 <div key={i}>
                   <p className="font-serif text-3xl sm:text-4xl font-bold text-gold-400">{stat.value}</p>
@@ -190,21 +197,20 @@ export default function App() {
                 Founded on Principles That Endure
               </h3>
               <p className="text-cream-100/80 leading-relaxed mb-6">
-                In 1952, a group of dedicated teachers in Millbrook came together with a 
-                simple but powerful idea: that by pooling their resources, they could help 
-                each other achieve financial security. With just $500 in initial deposits, 
-                Heritage Trust Credit Union was born.
+                The Accra Christ The King Cooperative Credit Union was established on 
+                6th February 1983 and was officially registered on 14th October 1998. 
+                It later became affiliated with the Credit Union Association 
+                (CUA) on 2nd August 2024.
               </p>
               <p className="text-cream-100/80 leading-relaxed mb-6">
-                What started as a small teachers' credit union has grown into a 
-                full-service financial institution serving over 85,000 members across 
-                the tri-state area. Yet our founding principle remains unchanged: 
+                Since then, we have grown into a full-service financial institution, 
+                yet our founding principle remains unchanged: 
                 <span className="text-gold-400 font-medium"> people helping people</span>.
               </p>
               <p className="text-cream-100/80 leading-relaxed">
                 Today, we continue to honor the vision of our founders by providing 
-                personalized financial solutions, competitive rates, and the kind of 
-                service that can only come from a true community partner.
+                personalized financial solutions and competitive rates, with reliable  
+                service.
               </p>
             </div>
             
@@ -212,12 +218,9 @@ export default function App() {
               <h4 className="font-serif text-2xl font-semibold text-gold-400 mb-6">Our Milestones</h4>
               <div className="space-y-6">
                 {[
-                  { year: '1952', event: 'Founded by 12 teachers with $500 in deposits' },
-                  { year: '1978', event: 'Expanded membership to include all county employees' },
-                  { year: '1995', event: 'Reached $100 million in assets' },
-                  { year: '2008', event: 'Opened new headquarters in downtown Millbrook' },
-                  { year: '2015', event: 'Launched mobile banking platform' },
-                  { year: '2023', event: 'Surpassed $2.5 billion in assets under management' },
+                  { year: '1983', event: 'Our Union was established' },
+                  { year: '1998', event: 'On October 14th, we were offially registered' },
+                  { year: '2024', event: 'Credit Union Associasion (CUA) association' },
                 ].map((milestone, i) => (
                   <div key={i} className="flex items-start space-x-4">
                     <span className="font-serif text-lg font-bold text-gold-400 w-16">{milestone.year}</span>
@@ -227,26 +230,49 @@ export default function App() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Values */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Services Section */}
+      <section id="services" className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <p className="text-gold-400 font-medium tracking-widest uppercase mb-4">What We Offer</p>
+            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-cream-50 mb-6">
+              Comprehensive Financial Solutions
+            </h2>
+            <div className="decorative-line mx-auto" />
+            <p className="text-cream-100/70 mt-6 max-w-2xl mx-auto">
+              From savings accounts to business loans, we provide a full range of 
+              financial products designed to meet the unique needs of our members.
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Users, title: 'Member First', desc: 'Every decision we make starts with one question: what\'s best for our members?' },
-              { icon: Shield, title: 'Security', desc: 'Your deposits are federally insured up to $250,000 by the NCUA.' },
-              { icon: Heart, title: 'Community', desc: 'We reinvest in local communities through scholarships and sponsorships.' },
-              { icon: TrendingUp, title: 'Growth', desc: 'We help members build wealth through smart financial products and guidance.' },
-            ].map((value, i) => (
+              { icon: BanknoteArrowUp, title: 'Savings Accounts', desc: 'Providing secure savings. Deposit money and earn interest over time.' },
+              { icon: HandCoins, title: 'Loan Facilities', desc: 'Personal, business and emergency loans to qualified customers.' },
+              { icon: TrendingUp, title: 'Investments', desc: 'Invest funds for a fixed period at agreed interest rates.' },
+              { icon: Users, title: 'Current Accounts', desc: 'Providing transactional accounts for daily financial activities, withdrawals and payments.' },
+              { icon: Shield, title: 'Financial Advice', desc: 'Guiding customers on savings plans, debt management, and financial planning.' },
+              { icon: Handshake, title: 'Salary and Payroll Services', desc: 'Managing salary payments and payroll solutions for organizations and employees.' },
+              { icon: BanknoteArrowDown, title: 'Money Transfers', desc: 'Facilitating local money transfers (and mobile money alternatives) and other financial transactions.' },
+              { icon: Heart, title: 'Microfinance', desc: 'Providing financial assistance and credit solutions to small businesses and entrepreneurs.' },
+            ].map((service, i) => (
               <div key={i} className="card-glass rounded-2xl p-6 hover:border-gold-400/30 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-gold-400/10 flex items-center justify-center mb-4 group-hover:bg-gold-400/20 transition-colors">
-                  <value.icon className="w-6 h-6 text-gold-400" />
+                  <service.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h4 className="font-serif text-xl font-semibold text-cream-50 mb-2">{value.title}</h4>
-                <p className="text-cream-100/60 text-sm leading-relaxed">{value.desc}</p>
+                <h4 className="font-serif text-xl font-semibold text-cream-50 mb-2">{service.title}</h4>  
+                <p className="text-cream-100/60 text-sm leading-relaxed">{service.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+      
 
       {/* Testimonials Section */}
       <section id="testimonials" className="py-24 lg:py-32 bg-navy-800/50">
