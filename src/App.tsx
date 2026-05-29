@@ -35,12 +35,10 @@ export default function App() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
-                <span className="font-serif text-2xl font-bold text-navy-900">H</span>
-              </div>
+               <img src="/images/creditunionlogo.png" alt="Company Logo" style={{ width: '80px' }} />
               <div>
-                <h1 className="font-serif text-xl font-semibold text-cream-50">Heritage Trust</h1>
-                <p className="text-xs text-gold-400 tracking-widest uppercase">Credit Union</p>
+                <h1 className="font-serif text-xl font-semibold text-cream-50">Accra Christ The King</h1>
+                <p className="text-xs text-gold-400 tracking-widest uppercase">Cooperative Credit Union</p>
               </div>
             </div>
 
@@ -55,7 +53,10 @@ export default function App() {
                   {item}
                 </button>
               ))}
-              <button className="btn-gold px-6 py-2.5 rounded-full font-semibold">
+              <button
+              onClick={() => scrollToSection('location')} 
+              className="btn-gold px-6 py-2.5 rounded-full font-semibold"
+              >
                 Become a Member
               </button>
             </div>
@@ -111,22 +112,26 @@ export default function App() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center space-x-2 bg-navy-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gold-400/30 mb-8">
               <Award className="w-4 h-4 text-gold-400" />
-              <span className="text-sm text-gold-400 font-medium">Trusted Since 1952</span>
+              <span className="text-sm text-gold-400 font-medium">Trusted Since 1983</span>
             </div>
             
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-cream-50 leading-tight mb-6">
-              Banking on <br />
-              <span className="text-gradient-gold">Relationships</span>, <br />
-              Not Just Transactions
-            </h1>
-            
-            <p className="text-xl text-cream-100/80 max-w-2xl mb-10 leading-relaxed">
-              For over 70 years, Heritage Trust Credit Union has been the financial 
-              partner of choice for families and businesses. We're not just a bank—we're 
-              your neighbors, invested in your success.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div style={{ display: 'flex', justifyContent: 'center'}}>
+              <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-cream-50 leading-tight mb-6" >
+                Credit Union,
+                <span className="text-gradient-gold"> Happy Family!</span>
+              </h1>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'center'}}>
+              <p className="text-xl text-cream-100/80 max-w-2xl mb-10 leading-relaxed" style={{ textAlign: 'center' }}>
+                Accra Christ The King Cooperative Credit Union is a member-focused financial 
+                cooperative dedicated to promoting a strong savings culture and providing 
+                accessible loan facilities to its members to support their financial growth 
+                and future security.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4" style={{ justifyContent: 'center' }}>
               <button className="btn-gold px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center group">
                 Start Your Journey
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -553,7 +558,7 @@ export default function App() {
           {/* Bottom */}
           <div className="pt-8 border-t border-gold-400/10 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-cream-100/40 text-sm">
-              © 2024 Heritage Trust Credit Union. All rights reserved.
+              © 2026 Accra Christ the King Cooperative Credit Union. All rights reserved.
             </p>
             <div className="flex items-center space-x-2">
               <img 
