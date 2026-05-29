@@ -84,7 +84,10 @@ export default function App() {
                   {item}
                 </button>
               ))}
-              <button className="btn-gold w-full px-6 py-3 rounded-full font-semibold mt-4">
+              <button 
+              onClick={() => scrollToSection('location')} 
+              className="btn-gold w-full px-6 py-3 rounded-full font-semibold mt-4"
+              >
                 Become a Member
               </button>
             </div>
@@ -110,11 +113,13 @@ export default function App() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center space-x-2 bg-navy-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gold-400/30 mb-8">
-              <Award className="w-4 h-4 text-gold-400" />
-              <span className="text-sm text-gold-400 font-medium">Trusted Since 1983</span>
+            <div style={{ display: 'flex', justifyContent: 'center'}}>
+              <div className="inline-flex items-center space-x-2 bg-navy-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gold-400/30 mb-8">
+                <Award className="w-4 h-4 text-gold-400" />
+                <span className="text-sm text-gold-400 font-medium">Trusted Since 1983</span>
+              </div>
             </div>
-            
+
             <div style={{ display: 'flex', justifyContent: 'center'}}>
               <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-cream-50 leading-tight mb-6" >
                 Credit Union,
