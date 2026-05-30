@@ -179,7 +179,7 @@ export default function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-24 lg:py-32 bg-gradient-radial">
+      <section id="about" className="relative py-24 lg:py-32 bg-navy-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -234,7 +234,7 @@ export default function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 lg:py-32">
+      <section id="services" className="py-24 lg:py-32 bg-gradient-radial from-navy-800/50 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -286,7 +286,7 @@ export default function App() {
             <div className="decorative-line mx-auto" />
             <p className="text-cream-100/70 mt-6 max-w-2xl mx-auto">
               Don't just take our word for it—hear from the families and businesses 
-              who have made Heritage Trust their financial home.
+              who have made Accra Christ The King Credit Union their financial home.
             </p>
           </div>
 
@@ -297,19 +297,19 @@ export default function App() {
                 image: '/images/testimonial-1.jpg',
                 name: 'Marcus Thompson',
                 role: 'Small Business Owner',
-                quote: 'When other banks turned me down for a business loan, Heritage Trust took the time to understand my vision. They didn\'t just see numbers—they saw potential. My restaurant is now thriving, and I\'ll never bank anywhere else.',
+                quote: 'When other banks turned me down for a business loan, CTK credit Union took the time to understand my vision. They didn\'t just see numbers—they saw potential. My restaurant is now thriving.',
               },
               {
                 image: '/images/testimonial-2.jpg',
                 name: 'Robert & Linda Chen',
                 role: 'Retired Educators',
-                quote: 'We\'ve been members for 40 years. Heritage Trust helped us buy our first home, put our kids through college, and now they\'re helping us enjoy a comfortable retirement. They\'re not just bankers—they\'re family.',
+                quote: 'We\'ve been members for 10 years. CTK credit Union helped us buy our first home, put our kids through college, and now they\'re helping us enjoy a comfortable retirement.',
               },
               {
                 image: '/images/testimonial-3.jpg',
                 name: 'Jessica Williams',
                 role: 'Marketing Director',
-                quote: 'The mobile app is fantastic, but what I really love is that I can still walk into a branch and be greeted by name. Heritage Trust combines modern convenience with old-fashioned personal service.',
+                quote: 'What I really love is that I can walk into a branch and be greeted by name. CTK credit Union combines modern convenience with old-fashioned personal service.',
               },
             ].map((testimonial, i) => (
               <div key={i} className="card-glass rounded-3xl p-8 relative overflow-hidden group hover:border-gold-400/30 transition-all">
@@ -349,7 +349,7 @@ export default function App() {
       </section>
 
       {/* Executives Section */}
-      <section id="leadership" className="py-24 lg:py-32">
+      <section id="leadership" className="py-24 lg:py-32 bg-gradient-radial from-navy-800/50 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -359,40 +359,54 @@ export default function App() {
             </h2>
             <div className="decorative-line mx-auto" />
             <p className="text-cream-100/70 mt-6 max-w-2xl mx-auto">
-              Our leadership team brings decades of combined experience in banking, 
-              finance, and community service to guide Heritage Trust into the future.
+              Our leadership team brings a combined experience in banking, 
+              finance, and community service to guide Accra Christ the King Credit Union into the future.
             </p>
           </div>
 
           {/* Executive Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                image: '/images/executive-1.jpg',
-                name: 'William J. Harrison',
-                title: 'President & CEO',
-                bio: '30+ years in credit union leadership. Former NCUA board member.',
-                linkedin: '#',
-              },
-              {
-                image: '/images/executive-2.jpg',
-                name: 'Dr. Patricia Chen',
-                title: 'Chief Financial Officer',
-                bio: 'Former VP at Wells Fargo. CPA with expertise in risk management.',
+                image: '/images/executive-4.jpg',
+                name: 'Mrs Nancy Tomani',
+                title: 'Board Chairperson',
+                bio: 'Extensive experience in credit union governance and community leadership.',
                 linkedin: '#',
               },
               {
                 image: '/images/executive-3.jpg',
-                name: 'Michael Rodriguez',
-                title: 'Chief Operating Officer',
-                bio: '20 years in banking operations. Led digital transformation initiatives.',
+                name: 'Mr. Hipolaitus Etse Equagoo',
+                title: 'Vice Chairperson',
+                bio: 'Formal expertise in multiple financial domains.',
                 linkedin: '#',
               },
               {
-                image: '/images/executive-4.jpg',
-                name: 'Sarah Mitchell',
-                title: 'Chief Member Experience Officer',
-                bio: 'Passionate about member service. Previously led CX at USAA.',
+                image: '/images/executive-3.jpg',
+                name: 'Mr Charles Owusu',
+                title: 'Treasurer',
+                bio: 'Years in financial management.',
+                linkedin: '#',
+              },
+              {
+                image: '/images/executive-1.jpg',
+                name: 'Mr. Michael Owusu',
+                title: 'Secretary',
+                bio: 'Passionate and dedicated leader.',
+                linkedin: '#',
+              },
+              {
+                image: '/images/executive-2.jpg',
+                name: 'Mrs. Clare Naanibo',
+                title: 'General Manager',
+                bio: 'Passionate about member service.',
+                linkedin: '#',
+              },
+              {
+                image: '/images/executive-1.jpg',
+                name: 'Mr. William Paul Ayitey',
+                title: 'Marketing Personnel',
+                bio: 'Led digital transformation initiatives.',
                 linkedin: '#',
               },
             ].map((exec, i) => (
@@ -448,7 +462,7 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-cream-50 mb-1">Main Office</h4>
-                      <p className="text-cream-100/70">1250 Heritage Boulevard<br />Millbrook, NY 12545</p>
+                      <p className="text-cream-100/70">14 Jawaharial Nehru Rd<br />Accra - Ghana<br />GPS: GL-061-6791</p>
                     </div>
                   </div>
                   
@@ -458,8 +472,9 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-cream-50 mb-1">Phone</h4>
-                      <p className="text-cream-100/70">(555) 234-5678</p>
-                      <p className="text-cream-100/70 text-sm">Toll-free: (800) 555-HERITAGE</p>
+                      <p className="text-cream-100/70">(233) 302-776-578</p>
+                      <p className="text-cream-100/70">(233) 256-104-632</p>
+                      <p className="text-cream-100/70">(233) 203-415-799</p>
                     </div>
                   </div>
                   
@@ -469,7 +484,7 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-cream-50 mb-1">Email</h4>
-                      <p className="text-cream-100/70">info@heritagetrustcu.org</p>
+                      <p className="text-cream-100/70">accrachristtk.cu@gmail.com</p>
                     </div>
                   </div>
                   
@@ -479,9 +494,9 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-cream-50 mb-1">Hours</h4>
-                      <p className="text-cream-100/70">Mon-Fri: 9:00 AM - 5:00 PM</p>
-                      <p className="text-cream-100/70">Saturday: 9:00 AM - 1:00 PM</p>
-                      <p className="text-cream-100/70">Sunday: Closed</p>
+                      <p className="text-cream-100/70">Mon-Fri: 8:00 AM - 4:30 PM</p>
+                      <p className="text-cream-100/70">Sundays: 7:30 AM - 2:30 PM</p>
+                      <p className="text-cream-100/70">Saturdays & Public Holidays: Closed</p>
                     </div>
                   </div>
                 </div>
@@ -490,7 +505,7 @@ export default function App() {
               {/* Quick Actions */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <a 
-                  href="https://maps.google.com/?q=1250+Heritage+Blvd+Millbrook+NY" 
+                  href="https://maps.app.goo.gl/sSjV9ArGdd6E61FGA" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold px-6 py-4 rounded-xl font-semibold text-center flex items-center justify-center space-x-2"
@@ -499,7 +514,7 @@ export default function App() {
                   <span>Get Directions</span>
                 </a>
                 <a 
-                  href="tel:5552345678"
+                  href="tel:+233302776578"
                   className="btn-outline-gold px-6 py-4 rounded-xl font-semibold text-center flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
@@ -511,14 +526,14 @@ export default function App() {
             {/* Map */}
             <div className="rounded-3xl overflow-hidden border border-gold-400/20 h-[500px]">
               <iframe 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-73.7122%2C41.7822%2C-73.6322%2C41.8222&amp;layer=mapnik&amp;marker=41.8022%2C-73.6722"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1885110139846802%2C5.5767879919849825%2C-0.18279254436492923%2C5.58012487464749&amp;layer=mapnik&amp;marker=5.57845376618276%2C-0.1856517791748047"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Heritage Trust Credit Union Location"
+                title="Accra Christ the King Credit Union Location"
               />
             </div>
           </div>
@@ -533,16 +548,15 @@ export default function App() {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
-                  <span className="font-serif text-2xl font-bold text-navy-900">H</span>
+                  <img src="/images/creditunionlogo.png" alt="Company Logo" style={{ width: '80px' }} />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-cream-50">Heritage Trust</h3>
-                  <p className="text-xs text-gold-400 tracking-widest uppercase">Credit Union</p>
+                  <h3 className="font-serif text-xl font-semibold text-cream-50">Accra Christ The King</h3>
+                  <p className="text-xs text-gold-400 tracking-widest uppercase">Cooperative Credit Union</p>
                 </div>
               </div>
               <p className="text-cream-100/60 max-w-md mb-6">
-                Federally insured by the National Credit Union Administration. 
-                Equal Housing Lender. Your savings are federally insured up to $250,000.
+                Federally insured by the National Credit Union Administration.
               </p>
               <div className="flex space-x-4">
                 {[Facebook, Twitter, Linkedin].map((Icon, i) => (
